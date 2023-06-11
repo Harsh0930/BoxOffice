@@ -1,0 +1,23 @@
+<section class="container-fluid dashboard_section py-5">
+    <h1 class="text-light display-6 fw-semibold text-center">Trending Movies</h1>
+</section>
+<div class="search_box my-5 d-flex justify-content-center">
+    <input type="text" placeholder="Search Fruit" [(ngModel)]="searchText" class="form-control searchInput"/>
+    <button class="btn btn_go mx-2" (click)="search()" type="button">Go</button>
+    <button class="btn btn_reset" (click)="reset()" type="button">Clear</button>
+</div>
+<section class="row d-flex justify-content-center container-fluid">
+<div class="col-lg-4 card p-0 m-1 border border-1 border-secondary" *ngFor="let movie of movies" style="width: 25rem;">
+    <img class="card-img-top img p-0" src="../../assets/{{movie.movieTitle}}.jpg" height="250" width="100" alt={{movie.movieTitle}}>
+    <div class="card-body">
+       <img src="../../assets/rating.jpg" alt={{movie.rating}} /><span class="text-light ms-2">{{movie.rating}}</span><br> 
+       
+       <!-- Write for other movie properties -->
+       <div class="card-content d-flex mt-2">
+        <span class="text-light">{{movie.movieTitle | titlecase }}</span>
+            <p class="card-text text-light">{{movie.genre}}</p>
+            <p class="card-text text-light">{{movie.yearOfRelease}}</p>
+       </div>
+     </div>
+ </div>
+</section>

@@ -1,0 +1,16 @@
+.dashboard_section{
+    height: auto;
+}
+.card-body{
+    background-color: black;
+}
+.card-content{
+    justify-content: space-between;
+}
+.btn_go,.btn_reset{
+background-color: #A6344D;
+color: whitesmoke;
+}
+.searchInput{
+    width: 20%;
+}
